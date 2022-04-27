@@ -1,0 +1,29 @@
+{
+    "name": "elephox/builder-whoops-handler",
+    "description": "Elephox Application Builder extension for Whoops as exception handler",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ricardo Boss",
+            "email": "contact@ricardoboss.de"
+        }
+    ],
+    "require": {
+        "elephox/console": "^0.4",
+        "filp/whoops": "^2.14"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^5.11"
+    },
+    "suggest": {
+        "nunomaduro/collision": "For pretty formatting of exceptions in the console"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Elephox\\Builder\\Whoops\\": "src/"
+        }
+    }
+}
