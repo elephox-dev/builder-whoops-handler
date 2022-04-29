@@ -12,9 +12,15 @@ trait AddsWhoopsHandler
 {
 	abstract protected function getServices(): ServiceCollection;
 
-	public function addWhoops(): void
+	public function addWhoops(bool $registerGlobal = true): void
 	{
 		$this->getServices()->addSingleton(WhoopsRunInterface::class, WhoopsRun::class);
 		$this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class, replace: true);
+
+		if ($registerGlobal) {
+			set_exception_handler(function ($exception) {
+				$this->getServices()->requireService(ExceptionHandler::class)->handleException($exception);
+			});
+		}
 	}
 }
