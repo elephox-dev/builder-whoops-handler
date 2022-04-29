@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe313dab626d061b984525d1ec35b59a",
+    "content-hash": "7d46f06a55ebcf06dd117d0d236cead4",
     "packages": [
         {
             "name": "elephox/autoloading",
@@ -1605,6 +1605,59 @@
             "time": "2022-02-28T11:07:21+00:00"
         },
         {
+            "name": "facade/ignition-contracts",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facade/ignition-contracts.git",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facade/ignition-contracts/zipball/3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v2.15.8",
+                "phpunit/phpunit": "^9.3.11",
+                "vimeo/psalm": "^3.17.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Facade\\IgnitionContracts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://flareapp.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Solution contracts for Ignition",
+            "homepage": "https://github.com/facade/ignition-contracts",
+            "keywords": [
+                "contracts",
+                "flare",
+                "ignition"
+            ],
+            "support": {
+                "issues": "https://github.com/facade/ignition-contracts/issues",
+                "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
+            },
+            "time": "2020-10-16T08:27:54+00:00"
+        },
+        {
             "name": "friendsofphp/php-cs-fixer",
             "version": "v3.8.0",
             "source": {
@@ -1692,6 +1745,93 @@
                 }
             ],
             "time": "2022-03-18T17:20:59+00:00"
+        },
+        {
+            "name": "nunomaduro/collision",
+            "version": "v6.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/collision.git",
+                "reference": "c379636dc50e829edb3a8bcb944a01aa1aed8f25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/c379636dc50e829edb3a8bcb944a01aa1aed8f25",
+                "reference": "c379636dc50e829edb3a8bcb944a01aa1aed8f25",
+                "shasum": ""
+            },
+            "require": {
+                "facade/ignition-contracts": "^1.0.2",
+                "filp/whoops": "^2.14.5",
+                "php": "^8.0.0",
+                "symfony/console": "^6.0.2"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.4.1",
+                "laravel/framework": "^9.7",
+                "nunomaduro/larastan": "^1.0.2",
+                "nunomaduro/mock-final-classes": "^1.1.0",
+                "orchestra/testbench": "^7.3.0",
+                "phpunit/phpunit": "^9.5.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NunoMaduro\\Collision\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Cli error handling for console/command-line PHP applications.",
+            "keywords": [
+                "artisan",
+                "cli",
+                "command-line",
+                "console",
+                "error",
+                "handling",
+                "laravel",
+                "laravel-zero",
+                "php",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/collision/issues",
+                "source": "https://github.com/nunomaduro/collision"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/enunomaduro",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-04-05T15:31:38+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
