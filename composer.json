@@ -14,7 +14,8 @@
         "filp/whoops": "^2.14"
     },
     "require-dev": {
-        "nunomaduro/collision": "^5.11"
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "nunomaduro/collision": "^6.2"
     },
     "suggest": {
         "nunomaduro/collision": "For pretty formatting of exceptions in the console"

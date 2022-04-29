@@ -10,11 +10,11 @@ use Whoops\RunInterface as WhoopsRunInterface;
 
 trait AddsWhoopsHandler
 {
-    abstract protected function getServices(): ServiceCollection;
+	abstract protected function getServices(): ServiceCollection;
 
-    public function addWhoops(): void
-    {
-        $this->getServices()->addSingleton(WhoopsRunInterface::class, WhoopsRun::class);
-        $this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class, replace: true);
-    }
+	public function addWhoops(): void
+	{
+		$this->getServices()->addSingleton(WhoopsRunInterface::class, WhoopsRun::class);
+		$this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class, replace: true);
+	}
 }
