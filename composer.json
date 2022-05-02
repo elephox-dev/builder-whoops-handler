@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "elephox/console": "^0.4",
+        "elephox/console": "^0.4|^0.5",
         "filp/whoops": "^2.14"
     },
     "require-dev": {
