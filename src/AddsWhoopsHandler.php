@@ -13,7 +13,7 @@ trait AddsWhoopsHandler
 {
 	abstract protected function getServices(): ServiceCollection;
 
-	public function addWhoops(bool $registerErrorHandler = true): void
+	public function addWhoops(bool $registerErrorHandler = false): void
 	{
 		$this->getServices()->addSingleton(WhoopsRunInterface::class, WhoopsRun::class);
 		$this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class, replace: true);
