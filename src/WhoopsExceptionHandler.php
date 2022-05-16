@@ -3,34 +3,52 @@ declare(strict_types=1);
 
 namespace Elephox\Builder\Whoops;
 
+use Elephox\Support\Contract\ErrorHandler;
 use Elephox\Support\Contract\ExceptionHandler;
 use NunoMaduro\Collision\Handler as CollisionHandler;
 use Throwable;
 use Whoops\Handler\PlainTextHandler;
 use Whoops\RunInterface as WhoopsRunInterface;
 
-class WhoopsExceptionHandler implements ExceptionHandler
+class WhoopsExceptionHandler implements ExceptionHandler, ErrorHandler
 {
 	public function __construct(
 		private readonly WhoopsRunInterface $whoopsRun,
 	) {
 	}
 
-	public function handleException(Throwable $exception): void
+	protected function checkHandlers(): void
 	{
-		if (empty($this->whoopsRun->getHandlers())) {
-			/**
-			 * @psalm-suppress InternalClass
-			 * @psalm-suppress InternalMethod
-			 * @noinspection PhpInternalEntityUsedInspection
-			 */
-			if (class_exists(CollisionHandler::class)) {
-				$this->whoopsRun->pushHandler(new CollisionHandler());
-			} else {
-				$this->whoopsRun->pushHandler(new PlainTextHandler());
-			}
+		if (!empty($this->whoopsRun->getHandlers())) {
+			return;
 		}
 
+		/**
+		 * @psalm-suppress InternalClass
+		 * @psalm-suppress InternalMethod
+		 * @noinspection PhpInternalEntityUsedInspection
+		 */
+		if (class_exists(CollisionHandler::class)) {
+			$this->whoopsRun->pushHandler(new CollisionHandler());
+		} else {
+			$this->whoopsRun->pushHandler(new PlainTextHandler());
+		}
+	}
+
+	public function handleException(Throwable $exception): void
+	{
+		$this->checkHandlers();
+
 		$this->whoopsRun->handleException($exception);
+	}
+
+	/**
+	 * @throws \Whoops\Exception\ErrorException
+	 */
+	public function handleError(int $severity, string $message, string $file, int $line): bool
+	{
+		$this->checkHandlers();
+
+		return $this->whoopsRun->handleError($severity, $message, $file, $line);
 	}
 }
