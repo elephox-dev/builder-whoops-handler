@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d46f06a55ebcf06dd117d0d236cead4",
+    "content-hash": "8393c96a1624e5b1043b92213f79289d",
     "packages": [
         {
             "name": "elephox/autoloading",
@@ -150,16 +150,16 @@
         },
         {
             "name": "elephox/console",
-            "version": "dev-develop",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elephox-dev/console.git",
-                "reference": "38e2e64fef0c90966bff00410cd4adbf24181280"
+                "reference": "d27488dc3915718aacaa2dca87d356f54279aeb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elephox-dev/console/zipball/38e2e64fef0c90966bff00410cd4adbf24181280",
-                "reference": "38e2e64fef0c90966bff00410cd4adbf24181280",
+                "url": "https://api.github.com/repos/elephox-dev/console/zipball/d27488dc3915718aacaa2dca87d356f54279aeb6",
+                "reference": "d27488dc3915718aacaa2dca87d356f54279aeb6",
                 "shasum": ""
             },
             "require": {
@@ -174,7 +174,6 @@
                 "jetbrains/phpstorm-attributes": "^1.0",
                 "php": "^8.1 <8.3"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -196,7 +195,7 @@
                 "issues": "https://github.com/elephox-dev/framework/issues",
                 "source": "https://github.com/elephox-dev/framework"
             },
-            "time": "2022-05-16T16:52:29+00:00"
+            "time": "2022-04-29T08:00:12+00:00"
         },
         {
             "name": "elephox/di",
@@ -3039,9 +3038,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "elephox/console": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
