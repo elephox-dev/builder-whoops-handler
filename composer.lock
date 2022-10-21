@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9a70218beb111327821117a95093d03",
+    "content-hash": "f2a0ea5620a7afe921166b6e6590e327",
     "packages": [
         {
             "name": "elephox/autoloading",
