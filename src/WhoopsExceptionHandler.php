@@ -7,6 +7,7 @@ use Elephox\Support\Contract\ErrorHandler;
 use Elephox\Support\Contract\ExceptionHandler;
 use NunoMaduro\Collision\Handler as CollisionHandler;
 use Throwable;
+use Whoops\Exception\ErrorException as WhoopsErrorException;
 use Whoops\Handler\PlainTextHandler;
 use Whoops\RunInterface as WhoopsRunInterface;
 
@@ -43,7 +44,7 @@ class WhoopsExceptionHandler implements ExceptionHandler, ErrorHandler
 	}
 
 	/**
-	 * @throws \Whoops\Exception\ErrorException
+	 * @throws WhoopsErrorException
 	 */
 	public function handleError(int $severity, string $message, string $file, int $line): bool
 	{
