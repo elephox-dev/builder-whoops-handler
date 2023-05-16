@@ -15,11 +15,12 @@ trait AddsWhoopsHandler
 
 	public function addWhoops(bool $registerErrorHandler = false): void
 	{
-		$this->getServices()->addSingleton(WhoopsRunInterface::class, WhoopsRun::class);
-		$this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class, replace: true);
+		$this->getServices()->tryAddSingleton(WhoopsRunInterface::class, WhoopsRun::class);
+
+		$this->getServices()->addSingleton(ExceptionHandler::class, WhoopsExceptionHandler::class);
 
 		if ($registerErrorHandler) {
-			$this->getServices()->addSingleton(ErrorHandler::class, WhoopsExceptionHandler::class, replace: true);
+			$this->getServices()->addSingleton(ErrorHandler::class, WhoopsExceptionHandler::class);
 		}
 	}
 }

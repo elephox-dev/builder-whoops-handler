@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": "^8.1 <8.3",
-        "elephox/console": "*",
-        "filp/whoops": "^2.14"
+        "php": "^8.2 <8.4",
+        "elephox/framework": "dev-develop",
+        "filp/whoops": "^2.15"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.12",
-        "nunomaduro/collision": "^6.3"
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "nunomaduro/collision": "^6.4"
     },
     "suggest": {
         "nunomaduro/collision": "For pretty formatting of exceptions in the console"
